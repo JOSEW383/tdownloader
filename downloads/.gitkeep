@@ -1,0 +1,4 @@
+
+# This file ensures the downloads directory is tracked by Git.
+# The downloads folder is used by the Telegram downloader bot to store downloaded files.
+# Keep this file even if the directory is empty.

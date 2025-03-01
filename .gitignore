@@ -1,0 +1,7 @@
+# Ignore all files in downloads directory But keep the .gitkeep file
+downloads/*
+!downloads/.gitkeep
+
+# Ignore files with sensitive information
+docker-compose.yml
+.env

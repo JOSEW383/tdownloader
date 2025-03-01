@@ -1,0 +1,40 @@
+services:
+  tdownloader:
+    build: ./config
+    container_name: tdownloader
+    environment:
+      - TELEGRAM_BOT_TOKEN=your_bot_token_here
+      - BOT_OWNER_ID=your_owner_id_here
+      - BOT_DOWNLOAD_DIR=/app/downloads
+      - API_ID=your_api_id_here
+      - API_HASH=your_api_hash_here
+      - TELEGRAM_BOT_API_URL=http://telegram_api:8081
+    volumes:
+      - ./downloads:/app/downloads
+    restart: unless-stopped
+    depends_on:
+      - telegram_api
+    networks:
+      - telegram_network
+    labels:
+      ignore_run_script: "false"
+  
+  telegram_api:
+    image: aiogram/telegram-bot-api:latest
+    container_name: telegram_api
+    environment:
+      - TELEGRAM_API_ID=your_api_id_here
+      - TELEGRAM_API_HASH=your_api_hash_here
+    volumes:
+      - telegram-api-data:/var/lib/telegram-bot-api
+    command: --local --api-id=your_api_id_here --api-hash=your_api_hash_here
+    restart: unless-stopped
+    networks:
+      - telegram_network
+
+networks:
+  telegram_network:
+    driver: bridge
+
+volumes:
+  telegram-api-data:
