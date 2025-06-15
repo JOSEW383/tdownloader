@@ -2,7 +2,9 @@
 
 TDownloader is a Telegram bot that allows downloading large files directly from Telegram. Using a local implementation of the Telegram API, this bot can handle files of virtually any size without the usual Telegram limitations.
 
-<p><img src="https://github.com/JOSEW383/tdownloader/blob/main/TDownlaoderDemo.gif" alt="Demo" /></p>
+<p align="center">
+  <img src="https://github.com/JOSEW383/tdownloader/blob/main/TDownlaoderDemo.gif" alt="Demo" width="50%" height="50%" />
+</p>
 
 ## Features
 
