@@ -1,6 +1,6 @@
 services:
   tdownloader:
-    build: ./config
+    build: ./src
     container_name: tdownloader
     environment:
       - TELEGRAM_BOT_TOKEN=your_bot_token_here
@@ -18,7 +18,7 @@ services:
       - telegram_network
     labels:
       ignore_run_script: "false"
-  
+
   telegram_api:
     image: aiogram/telegram-bot-api:latest
     container_name: telegram_api

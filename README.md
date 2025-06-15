@@ -82,7 +82,7 @@ The bot automatically detects and handles multipart files in various formats:
 
 ```
 tdownloader/
-├── config/                    # Application code
+├── src/                      # Application code
 │   ├── main.py               # Main entry point
 │   ├── config_manager.py     # Configuration management
 │   ├── download_manager.py   # Download handling
